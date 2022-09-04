@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import LoginForm from './components/LoginForm/LoginForm'
-import RegistrationForm from './components/LoginForm/RegistrationForm';
+import RegistrationForm from './components/RegistrationForm/RegistrationForm';
 
 const App: React.FC = () => {
   return (
