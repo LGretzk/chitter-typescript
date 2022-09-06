@@ -1,4 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { RootState } from "../../app/rootReducer";
+import { loadPeeps } from "./Peeps.actions";
 
 export interface iUser {
     id: number,
@@ -14,20 +16,29 @@ export interface iPeep {
     likes: iUser[]
 }
 
-const initialState: iPeep[] = [];
+const initialState: (iPeep)[] = [];
 
 const peepSlice = createSlice({
     name: 'peeps',
     initialState,
     reducers: {},
     extraReducers: builder => {
+        builder
         // Load peeps success
-        .addCase()
+        .addCase(loadPeeps.fulfilled, (state: iPeep[], action) => {
+            if (action.payload) {
+                return state = action.payload;
+            }
+        })
     }
-})
+});
+
+export default peepSlice.reducer;
+
+export const peepSelector = (state: RootState) => state.peeps;
 
 
-
+// Return value from the API:
 // [
 //     {
 //       "id": 3,
