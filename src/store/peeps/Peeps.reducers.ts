@@ -35,7 +35,7 @@ const peepSlice = createSlice({
 
 export default peepSlice.reducer;
 
-export const peepSelector = (state: RootState) => state.peeps;
+
 
 
 // Return value from the API:
