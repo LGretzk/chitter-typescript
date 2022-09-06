@@ -4,7 +4,7 @@ import { AppDispatch } from "../../app/store";
 import { loadPeeps } from "../../store/peeps/Peeps.actions";
 import { peepSelector } from "../../store/peeps/Peeps.reducers";
 
-function Peeps() {
+const Peeps: React.FC = () => {
     const dispatch: AppDispatch = useDispatch();
     let peeps = peepSelector;
 
@@ -21,3 +21,5 @@ function Peeps() {
         </div>
     )
 }
+
+export default Peeps;
