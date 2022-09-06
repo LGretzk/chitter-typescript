@@ -1,20 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { RootState } from "../../app/rootReducer";
 import { loadPeeps } from "./Peeps.actions";
-
-export interface iUser {
-    id: number,
-    handle: string
-}
-
-export interface iPeep {
-    id: number,
-    body: string,
-    created_at: string,
-    updated_at: string,
-    user: iUser,
-    likes: iUser[]
-}
 
 const initialState: (iPeep)[] = [];
 

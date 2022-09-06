@@ -13,7 +13,6 @@ const Peeps: React.FC = () => {
             await dispatch(loadPeeps());
         }
         load();
-        console.log(peeps)
     }, [dispatch]);
 
     return (

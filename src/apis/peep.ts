@@ -1,5 +1,3 @@
-import { iPeep } from '../store/peeps/Peeps.reducers'
-
 // API interface for leading peeps
 export const fetchPeeps = async () => {
     try {
