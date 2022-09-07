@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { loadPeeps } from "./Peeps.actions";
 
+// Each slice file should define a type for its initial state value, so that createSlice can correctly infer the type of state in each case reducer.
 const initialState: (iPeep)[] = [];
 
 const peepSlice = createSlice({

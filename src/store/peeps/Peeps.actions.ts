@@ -1,7 +1,8 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { fetchPeeps } from "../../apis/peep";
 
-export const loadPeeps = createAsyncThunk<iPeep[] | void>(
+// The only type needed to be provided for createAsyncThunk is the type of the argument for the payload creation callback (here empty)
+export const loadPeeps = createAsyncThunk(
     'peeps/loadPeeps', 
     async () => {
         try {
